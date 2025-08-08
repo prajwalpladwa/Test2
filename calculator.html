@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #input{
+        height: 20px;
+        width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        border-width: 3px;
+        border-width: 2px;
+        border-radius: 5%;
+    }
+    button{
+        width:60px;
+        height:40px;
+        border-radius: 5px;
+    }
+    #frame{
+            width: 255px;
+            height: 280px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            border-width: 2px;
+            flex-wrap: wrap;
+            
+    }
+    #frame2{
+            width: 210px;
+            height: 50px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            border-width: 1px;
+            box-shadow: #ad5656;
+            flex-wrap: wrap;
+            
+    }
+    #frame3{
+            width: 35px;
+            height: 48px;
+            border: 1px solid #c3c3c3;
+            display: flex;
+            border-width: 2px;
+            flex-wrap: wrap;
+            
+    }
+    #calculate{
+        width: 252px;
+    }
+    container{
+        width: 50px;
+        height: 50px;
+        border: 3px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    p{
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 20px;
+        padding: 0px;
+    }
+</style>
+<body>
+    <h1> CALCULATOR </h1>
+    <script src="script.js"></script>
+    
+    <div id="frame">
+        <div  id="frame2"><p id="display">0</p> </div>&nbsp;
+            <div id="frame3">
+                <centre>
+                    <p id="operation"></p>
+                    <p id="operand2" style="visibility: hidden;"></p>
+                </centre>
+            </div>
+            <div id="numbers">
+                <table>
+                    <tr>
+                        <td><button onclick="calculator(7)">7</button></td>
+                        <td><button onclick="calculator(8)">8</button></td>
+                        <td><button onclick="calculator(9)">9</button></td>
+                        <td><button onclick="calculator('+')">+</button></td>
+                    </tr>
+                     <tr>
+                        <td><button onclick="calculator(4)">4</button></td>
+                        <td><button onclick="calculator(5)">5</button></td>
+                        <td><button onclick="calculator(6)">6</button></td>
+                        <td><button onclick="calculator('-')">-</button></td>
+                    </tr>
+                     <tr>
+                        <td><button onclick="calculator(1)">1</button></td>
+                        <td><button onclick="calculator(2)">2</button></td>
+                        <td><button onclick="calculator(3)">3</button></td>
+                        <td><button onclick="calculator('+')">+</button></td>
+                    </tr>
+                     <tr>
+                        <td><button onclick="calculator('/')">/</button></td>
+                        <td><button onclick="calculator('*')">*</button></td>
+                        <td><button onclick="calculator(0)">0</button></td>
+                        <td><button onclick="calculator('c')">c</button></td>
+                    </tr>
+                </table>
+                <button id="calculate" onclick="calculator('=')">calculate</button>
+                </div>       
+    </div>
+</body>
+</html>

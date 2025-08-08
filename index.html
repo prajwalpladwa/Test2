@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+           
+            function addTask()
+            {
+                const input = document.getElementById("input")
+                const task= input.value.trim()
+                const li = document.createElement('li')
+
+                const del = document.createElement("button")
+                del.innerText="delete"
+                del.onclick=() =>{
+                    li.remove()
+                }
+                li.innerText = task
+                li.innerHTML=`${task}`
+                li.appendChild(del)
+                document.getElementById('list').appendChild(li)
+                input.value = ''
+            }
+
+        </script>
+<body>
+    <h1>To DO LIST </h2>
+        <input id="input" placeholder="Enter an task">
+        <button onclick="addTask()">add</button>
+        <ol ID="list"></ul>
+        
+</body>
+</html>

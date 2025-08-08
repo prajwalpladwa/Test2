@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        background-color: aqua;
+        color: aquamarine;
+        border-radius: 5px;
+        border-radius: 3px;
+        border-color: blue;
+        size: auto;
+    }s
+    #task{
+        background-color: #6bfaee;
+        border-radius: 3px;
+    }
+    #addTask{
+        background-color: #6bfaee;
+        border-radius: 3px;
+    }
+    #list{
+       background-color: aqua;
+        color: aquamarine;
+        border-radius: 5px;
+        border-radius: 3px;
+        border-color: blue;
+    }
+    #addTask{
+        width: 70px;
+    }
+
+</style>
+<script>
+    function addTask(){
+        let task =  document.getElementById("task").value
+        console.log(task)
+        let tasklist= document.getElementById("tasklist")
+        let newtask= document.createElement('tr')
+        tasklist.appendChild(newtask)
+        newtask.innerHTML=`<tr><td><input value=${task}></td><td><button id="addTask" onClick="this.parentNode.parentNode.remove()">remove</button></td></tr>`
+        
+        
+        
+        
+    }
+</script>
+<body>
+    <h1> to do list</h1>
+    <table>
+        <tr>
+            <div class="input">
+                <td><input id="task" placeholder="Enter an task ..."></td> 
+                <td><button id="addTask"onclick="addTask()">Add</button></td>
+            </div>
+            
+        </tr>
+    </table>
+    <table>
+         <div id="tasklist">
+
+            </div>
+    </table>
+    
+</body>
+</html>
